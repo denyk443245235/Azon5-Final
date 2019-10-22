@@ -1,0 +1,18 @@
+<div *ngIf="film" id = "container">
+  <div id = "film">
+    <h1>Title:{{film.Title}}</h1>
+    <div class = "info">Poster:{{film.Poster}}</div>
+    <div class = "info">Year:{{film.Year}}</div>
+    <div class = "info">imbDb:{{film.imdbID}}</div>
+    <div class = "info">Type:{{film.Type}}</div>
+    <div>
+      <img [src]="film.Poster" alt="">
+    </div>
+    <div>
+      <a routerLink="../" mat-raised-button color="primary">Exit</a>
+    </div>
+    <mat-checkbox (change)="Change()" [(ngModel)]="chechState" >Select</mat-checkbox>
+  </div>
+
+
+</div>

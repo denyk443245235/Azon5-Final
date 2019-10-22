@@ -1,0 +1,24 @@
+
+  <form class="example-form" id = "form">
+    <mat-form-field class="example-full-width" id ="form-field">
+      <input (keyup) = "findFilms(text)"  matInput placeholder="Search"  #text >
+    </mat-form-field>
+  </form>
+
+
+  <div *ngIf="Films" id = "vision">
+
+    <div class = "container" *ngFor="let film of Films">
+
+      <div class = "card" (click)="getDetails(film)">
+        <div>{{film.Title}}</div>
+        <div>
+          <img [src]="film.Poster" >
+        </div>
+      </div>
+    </div>
+
+  </div>
+<div id="selected">
+
+</div>

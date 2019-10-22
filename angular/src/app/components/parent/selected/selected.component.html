@@ -1,0 +1,11 @@
+<div *ngIf="SelectedFilms">
+  <div id="container" *ngFor="let film of SelectedFilms">
+    <div class="film" (click)="getDetails(film)">
+      <div>{{film.Title}}</div>
+      <div>
+        <img [src]="film.Poster" alt="">
+      </div>
+      <button (click)="Delete(film.Title) " mat-raised-button color="warn">Delete</button>
+    </div>
+  </div>
+</div>
