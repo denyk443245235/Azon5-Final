@@ -17,7 +17,7 @@ export class TitleComponent implements OnInit {
 
   findFilms(text) {
     let keys = Object.keys(localStorage);
-    this.service.getFilms(text.value).subscribe((result) => {
+    this.service.getFilms(text.value).subscribe((result:any) => {
       if (result) {
 
         this.Films = result.filter((film) => {
